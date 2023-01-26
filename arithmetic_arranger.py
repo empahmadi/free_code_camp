@@ -1,10 +1,14 @@
-def arithmetic_arranger(arr, status):
+def arithmetic_arranger(arr, status=False):
     first = ''
     second = ''
     third = ''
     fourth = ''
+    if len(arr) > 5:
+        return "Error: Too many problems."
     for i in range(len(arr)):
         operand1, operation, operand2 = arr[i].split(" ")
+        if len(operand1) > 4 or len(operand2) > 4:
+            return "Error: Numbers cannot be more than four digits."
         o1 = 0
         o2 = 0
         try:
@@ -40,7 +44,7 @@ def arithmetic_arranger(arr, status):
 
 def main():
     arr = []
-    print(arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True))
+    print(arithmetic_arranger(['24 + 85215', '3801 - 2', '45 + 43', '123 + 49'], True))
 
 
 if __name__ == '__main__':

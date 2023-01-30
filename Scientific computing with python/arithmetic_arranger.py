@@ -44,7 +44,7 @@ def arithmetic_arranger(arr, status=False):
 
 def main():
     arr = []
-    print(arithmetic_arranger(['24 + 85215', '3801 - 2', '45 + 43', '123 + 49'], True))
+    print(arithmetic_arranger(['24 + 8515', '3801 - 2', '45 + 43', '123 + 49'], True))
 
 
 if __name__ == '__main__':
